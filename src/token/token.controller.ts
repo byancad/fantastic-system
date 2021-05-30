@@ -16,7 +16,17 @@ export class TokenController {
 
   @Post('/link-token')
   @HttpCode(200)
-  createBooking(@Req() req, @Body() createLinkToken: any): Promise<void> {
+  createLinkToken(@Req() req): Promise<void> {
     return this.tokenService.createLinkToken(req.user);
+  }
+
+  @Post('/access-token')
+  @HttpCode(200)
+  exchangeLinkTokenForAccessToken(
+    @Req() req,
+    @Body() body: any,
+  ): Promise<void> {
+    const { publicToken } = body;
+    return this.tokenService.createAccessToken(req.user, publicToken);
   }
 }

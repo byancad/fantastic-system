@@ -1,19 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import e from 'express';
 import { User } from 'src/users/users.entity';
-import * as plaid from 'plaid';
+import { plaidClient } from '../appConfigs/plaidConfig';
 
 @Injectable()
 export class TokenService {
   async createLinkToken(user: User): Promise<any> {
-    const plaidClient = new plaid.Client({
-      clientID: '60914bfb83a476001144830d',
-      secret: 'ebf23fa94386dbc8307d372722256f',
-      env: plaid.environments.development,
-      options: {
-        version: '2020-09-14',
-      },
-    });
-
     const { id } = user;
     const configs = {
       user: {
@@ -24,7 +16,6 @@ export class TokenService {
       products: ['transactions'],
       country_codes: ['US'],
       language: 'en',
-      // redirect_uri: 'http://localhost:3000',
     };
 
     try {
@@ -32,6 +23,15 @@ export class TokenService {
       return response;
     } catch (e) {
       console.log(e);
+    }
+  }
+
+  async createAccessToken(user: User, publicToken: string): Promise<any> {
+    try {
+      const response = await plaidClient.exchangePublicToken(publicToken);
+      return response;
+    } catch (e) {
+      return e;
     }
   }
 }
