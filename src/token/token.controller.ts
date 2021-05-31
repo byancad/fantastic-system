@@ -15,7 +15,7 @@ import {
 } from './token.dto';
 
 @Controller('token')
-// @UseGuards(AuthGuard())
+@UseGuards(AuthGuard())
 export class TokenController {
   constructor(private tokenService: TokenService) {}
 
