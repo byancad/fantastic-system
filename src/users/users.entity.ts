@@ -1,4 +1,12 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, Unique , ManyToMany, JoinTable} from 'typeorm';
+import {
+  BaseEntity,
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  Unique,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
 import { Roles } from '../roles/roles.entity';
 import * as bcrypt from 'bcrypt';
 
@@ -20,13 +28,16 @@ export class User extends BaseEntity {
   @Column()
   salt: string;
 
-  @ManyToMany(type => Roles, roles => roles.users, {cascade: true})
+  @ManyToMany(
+    type => Roles,
+    roles => roles.users,
+    { cascade: true },
+  )
   @JoinTable({
     name: 'users_roles',
-    joinColumn: { name: 'userId', referencedColumnName: 'id'},
-    inverseJoinColumn: { name: 'roleId', referencedColumnName: 'id'},
+    joinColumn: { name: 'userId', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'roleId', referencedColumnName: 'id' },
   })
-  
   roles: Roles[];
 
   async validatePassword(password: string): Promise<boolean> {

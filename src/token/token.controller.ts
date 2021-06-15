@@ -5,14 +5,11 @@ import {
   Body,
   UseGuards,
   Req,
+  Get,
 } from '@nestjs/common';
 import { TokenService } from './token.service';
 import { AuthGuard } from '@nestjs/passport';
-import {
-  LinkTokenResponseDto,
-  AccessTokenResponseDto,
-  AccessTokenRequestDto,
-} from './token.dto';
+import { LinkTokenResponseDto, AccessTokenRequestDto } from './token.dto';
 
 @Controller('token')
 @UseGuards(AuthGuard())
@@ -30,8 +27,15 @@ export class TokenController {
   exchangeLinkTokenForAccessToken(
     @Req() req,
     @Body() body: AccessTokenRequestDto,
-  ): Promise<AccessTokenResponseDto> {
+  ): Promise<void> {
     const { publicToken } = body;
     return this.tokenService.createAccessToken(req.user, publicToken);
+  }
+
+  @Get('/items')
+  @HttpCode(200)
+  @UseGuards(AuthGuard())
+  getItems(@Req() req): Promise<any> {
+    return this.tokenService.getPlaidItems(req.user.id);
   }
 }

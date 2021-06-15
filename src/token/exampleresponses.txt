@@ -1,0 +1,245 @@
+item
+{
+  item: {
+    available_products: [ 'auth', 'balance' ],
+    billed_products: [ 'transactions' ],
+    consent_expiration_time: null,
+    error: null,
+    institution_id: 'ins_115686',
+    item_id: 'dpZa153ajyhOZXkB0D7gHk933b5jbeHb4mBge',
+    update_type: 'background',
+    webhook: ''
+  },
+  request_id: 'EBhYLpEKAD4PHEF',
+  status: {
+    last_webhook: null,
+    transactions: {
+      last_failed_update: null,
+      last_successful_update: '2021-06-03T12:25:36.416Z'
+    }
+  },
+  status_code: 200
+}
+account
+{
+  accounts: [
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      balances: [Object],
+      mask: '4923',
+      name: 'x4923',
+      official_name: 'MC Platinum Cash Back Var Ra - x4923',
+      subtype: 'credit card',
+      type: 'credit'
+    },
+    {
+      account_id: 'yMBp1k0pERh0qgQD8BokiRbNw8ZnE9HXoZ46a',
+      balances: [Object],
+      mask: '9766',
+      name: '*****9766',
+      official_name: 'Primary Savings - x9766',
+      subtype: 'savings',
+      type: 'depository'
+    }
+  ],
+  item: {
+    available_products: [ 'auth', 'balance' ],
+    billed_products: [ 'transactions' ],
+    consent_expiration_time: null,
+    error: null,
+    institution_id: 'ins_115686',
+    item_id: 'dpZa153ajyhOZXkB0D7gHk933b5jbeHb4mBge',
+    update_type: 'background',
+    webhook: ''
+  },
+  request_id: 'FvICTtoMlr8je5n',
+  status_code: 200
+}
+balance
+{
+  accounts: [
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      balances: [Object],
+      mask: '4923',
+      name: 'x4923',
+      official_name: 'MC Platinum Cash Back Var Ra - x4923',
+      subtype: 'credit card',
+      type: 'credit'
+    },
+    {
+      account_id: 'yMBp1k0pERh0qgQD8BokiRbNw8ZnE9HXoZ46a',
+      balances: [Object],
+      mask: '9766',
+      name: '*****9766',
+      official_name: 'Primary Savings - x9766',
+      subtype: 'savings',
+      type: 'depository'
+    }
+  ],
+  item: {
+    available_products: [ 'auth', 'balance' ],
+    billed_products: [ 'transactions' ],
+    consent_expiration_time: null,
+    error: null,
+    institution_id: 'ins_115686',
+    item_id: 'dpZa153ajyhOZXkB0D7gHk933b5jbeHb4mBge',
+    update_type: 'background',
+    webhook: ''
+  },
+  request_id: 'M2TENB0Z8moBwSA',
+  status_code: 200
+}
+transaction
+{
+  accounts: [
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      balances: [Object],
+      mask: '4923',
+      name: 'x4923',
+      official_name: 'MC Platinum Cash Back Var Ra - x4923',
+      subtype: 'credit card',
+      type: 'credit'
+    },
+    {
+      account_id: 'yMBp1k0pERh0qgQD8BokiRbNw8ZnE9HXoZ46a',
+      balances: [Object],
+      mask: '9766',
+      name: '*****9766',
+      official_name: 'Primary Savings - x9766',
+      subtype: 'savings',
+      type: 'depository'
+    }
+  ],
+  item: {
+    available_products: [ 'auth', 'balance' ],
+    billed_products: [ 'transactions' ],
+    consent_expiration_time: null,
+    error: null,
+    institution_id: 'ins_115686',
+    item_id: 'dpZa153ajyhOZXkB0D7gHk933b5jbeHb4mBge',
+    update_type: 'background',
+    webhook: ''
+  },
+  request_id: 'dldkhGVgtKTvXpq',
+  total_transactions: 5,
+  transactions: [
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      account_owner: '',
+      amount: -98,
+      authorized_date: null,
+      authorized_datetime: null,
+      category: [Array],
+      category_id: '21005000',
+      date: '2021-06-02',
+      datetime: null,
+      iso_currency_code: 'USD',
+      location: [Object],
+      merchant_name: null,
+      name: 'PENDING',
+      payment_channel: 'other',
+      payment_meta: [Object],
+      pending: true,
+      pending_transaction_id: null,
+      transaction_code: null,
+      transaction_id: 'kEVpkXNpjgCmwAaRv6YBIbyz6MXBARU96ByAM',
+      transaction_type: 'special',
+      unofficial_currency_code: null
+    },
+    {
+      account_id: 'yMBp1k0pERh0qgQD8BokiRbNw8ZnE9HXoZ46a',
+      account_owner: '',
+      amount: -100,
+      authorized_date: null,
+      authorized_datetime: null,
+      category: [Array],
+      category_id: '21005000',
+      date: '2021-06-01',
+      datetime: null,
+      iso_currency_code: 'USD',
+      location: [Object],
+      merchant_name: null,
+      name: 'GARCIA SO 2021-06-010000006 - FUNDSXFER',
+      payment_channel: 'other',
+      payment_meta: [Object],
+      pending: false,
+      pending_transaction_id: null,
+      transaction_code: null,
+      transaction_id: '1jBJrEgJm7imA4vowK08IwAknLryjXcb0899D',
+      transaction_type: 'special',
+      unofficial_currency_code: null
+    },
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      account_owner: '',
+      amount: 135,
+      authorized_date: null,
+      authorized_datetime: null,
+      category: [Array],
+      category_id: '19012004',
+      date: '2021-06-01',
+      datetime: null,
+      iso_currency_code: 'USD',
+      location: [Object],
+      merchant_name: 'Wp Aces',
+      name: 'WODIFY PAY* WP ACES JI',
+      payment_channel: 'in store',
+      payment_meta: [Object],
+      pending: false,
+      pending_transaction_id: null,
+      transaction_code: null,
+      transaction_id: 'BqojApkjO3HRjNVpoL0YF6mMb8ekR7H4gkVVw',
+      transaction_type: 'place',
+      unofficial_currency_code: null
+    },
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      account_owner: '',
+      amount: 7.57,
+      authorized_date: null,
+      authorized_datetime: null,
+      category: [Array],
+      category_id: '18061000',
+      date: '2021-05-30',
+      datetime: null,
+      iso_currency_code: 'USD',
+      location: [Object],
+      merchant_name: 'Amazon Prime Video',
+      name: 'Prime Video*2R11K5650',
+      payment_channel: 'online',
+      payment_meta: [Object],
+      pending: false,
+      pending_transaction_id: null,
+      transaction_code: null,
+      transaction_id: 'qMdp4DqpgohAOBzgyd7xCog1PbnxBJcNqvggq',
+      transaction_type: 'place',
+      unofficial_currency_code: null
+    },
+    {
+      account_id: 'KjRNgoxN4QiRYxaZMLE0F47keRjZEXIdvwpkA',
+      account_owner: '',
+      amount: 43.76,
+      authorized_date: null,
+      authorized_datetime: null,
+      category: [Array],
+      category_id: '15002000',
+      date: '2021-05-27',
+      datetime: null,
+      iso_currency_code: 'USD',
+      location: [Object],
+      merchant_name: null,
+      name: 'INTEREST CHARGE PURCHASE',
+      payment_channel: 'other',
+      payment_meta: [Object],
+      pending: false,
+      pending_transaction_id: null,
+      transaction_code: null,
+      transaction_id: '34ywaVdwN0TQxe7VaA4MUaLp3NBVoDTDVBEjZ',
+      transaction_type: 'special',
+      unofficial_currency_code: null
+    }
+  ],
+  status_code: 200
+}
