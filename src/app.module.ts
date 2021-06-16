@@ -5,7 +5,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './appConfigs/typeOrm.config';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
-import { BookingsModule } from './bookings/bookings.module';
 import { TokenModule } from './token/token.module';
 
 @Module({
@@ -13,7 +12,6 @@ import { TokenModule } from './token/token.module';
     TypeOrmModule.forRoot(typeOrmConfig),
     UsersModule,
     RolesModule,
-    BookingsModule,
     TokenModule,
   ],
   controllers: [AppController],

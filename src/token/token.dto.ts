@@ -8,8 +8,8 @@ export type LinkTokenResponseDto = {
 export type AccessTokenResponseDto = {
   access_token: string;
   item_id: string;
-  request_id: string;
-  status_code: number;
+  request_id?: string;
+  status_code?: number;
 };
 
 export type AccessTokenRequestDto = {
