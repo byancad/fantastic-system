@@ -102,14 +102,13 @@ export class TokenService {
     }
   }
 
-  async getPlaidTransactions(userId: string): Promise<any> {
+  async getPlaidTransactions(userId: string): Promise<TransactionResponseDto> {
     try {
       const tokens = await this.tokenRepository.find({
         select: ['accessToken', 'itemId'],
         where: { userId: userId },
       });
       let transactionsObject: TransactionResponseDto = {};
-      let transactionDtos: Transaction[] = [];
 
       for (const token of tokens) {
         const decryptedToken = decrypt(token.accessToken);

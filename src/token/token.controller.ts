@@ -13,7 +13,7 @@ import {
   LinkTokenResponseDto,
   AccessTokenRequestDto,
   Account,
-  Transaction,
+  TransactionResponseDto,
 } from './token.dto';
 
 @Controller('token')
@@ -47,7 +47,7 @@ export class TokenController {
   @Get('/transactions')
   @HttpCode(200)
   @UseGuards(AuthGuard())
-  getTransactions(@Req() req): Promise<any> {
+  getTransactions(@Req() req): Promise<TransactionResponseDto> {
     return this.tokenService.getPlaidTransactions(req.user.id);
   }
 }
