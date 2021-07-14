@@ -11,8 +11,8 @@ export class GoalRepository extends Repository<Goal> {
   ): Promise<void> {
     const goal = new Goal();
     goal.accountId = accountId;
-    goal.goalAmount = goalAmount;
-    goal.goalcurrentAmount = 0.0;
+    goal.goalAmount = goalAmount.toString();
+    goal.goalCurrentAmount = (0.0).toString();
     goal.name = name;
     goal.userId = userId;
     await goal.save();

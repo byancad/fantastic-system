@@ -31,11 +31,11 @@ export class GoalController {
 
   @Delete('/:goalId')
   @HttpCode(200)
-  deleteGoal(@Req() req, @Param() goalId): Promise<any> {
+  deleteGoal(@Req() req, @Param('goalId') goalId): Promise<any> {
     return this.goalService.deleteGoal(req.user.id, goalId);
   }
 
-  @Post()
+  @Post('/transfer')
   @HttpCode(200)
   transferBetweenAccounts(
     @Req() req,

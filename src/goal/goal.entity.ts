@@ -21,11 +21,11 @@ export class Goal extends BaseEntity {
   @Column()
   name: string;
 
-  @Column()
-  goalAmount: number;
+  @Column({ name: 'goal_amount', type: 'numeric' })
+  goalAmount: string;
 
-  @Column()
-  goalcurrentAmount: number;
+  @Column({ name: 'goal_current_amount', type: 'numeric' })
+  goalCurrentAmount: string;
 
   async validateOwner(userId: string): Promise<boolean> {
     return userId === this.userId;
