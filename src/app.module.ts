@@ -6,6 +6,7 @@ import { typeOrmConfig } from './appConfigs/typeOrm.config';
 import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { TokenModule } from './token/token.module';
+import { GoalModule } from './goal/goal.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { TokenModule } from './token/token.module';
     UsersModule,
     RolesModule,
     TokenModule,
+    GoalModule,
   ],
   controllers: [AppController],
   providers: [AppService],
